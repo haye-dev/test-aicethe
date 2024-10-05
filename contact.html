@@ -14,14 +14,15 @@
         </div>
         <div class="header-buttons">
             <button class="btn">Settings</button>
-            <button class="btn">Back to homepage</button>
+            <button class="btn" id="back-btn-home">Back to homepage</button>
             <span class="title">Support</span>
         </div>
     </header>
 
     <div class="contact-container">
+        <!-- Form -->
         <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
-            <div class="contact-left-tittle">
+            <div class="contact-left-title">
                 <h2>What is your problem?</h2>
                 <hr>
             </div>
@@ -29,7 +30,8 @@
             <input type="text" name="name" placeholder=" Kimi no Na wa? 君の名は。" class="contact-inputs" required>
             <input type="email" name="email" placeholder="Your email" class="contact-inputs" required>
             <textarea name="message" placeholder="Please enter your problem" class="contact-inputs" required></textarea>
-            <button type="submit">Submit <img src="arrow_icon.png" alt=""></button>
+            <!--<input type="hidden" name="redirect" value="thankyou.html">-->
+            <button type="submit" >Submit <img src="arrow_icon.png" alt="" ></button>
         </form>
 
         <div class="contact-right">
