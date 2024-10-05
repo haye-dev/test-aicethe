@@ -1,20 +1,17 @@
 document.querySelector('.contact-left').addEventListener('submit', async function (event) {
-    event.preventDefault(); // Ngăn chặn hành động gửi form mặc định
+    event.preventDefault(); 
 
     const form = event.target;
-    const formData = new FormData(form); // Lấy dữ liệu form
+    const formData = new FormData(form); 
 
     try {
-        // Gửi dữ liệu tới Web3Forms API
         const response = await fetch('https://api.web3forms.com/submit', {
             method: 'POST',
             body: formData
         });
 
-        // Kiểm tra phản hồi từ API
         if (response.ok) {
-            // Điều hướng tới trang thankyou.html nếu thành công
-            window.location.href = 'thankyou.html'; // Điều hướng tới thankyou.html
+            window.location.href = 'thankyou.html'; 
         } else {
             const errorData = await response.json();
             console.error('Error from API:', errorData);
